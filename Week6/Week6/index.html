@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+    background:black;
+    color:white;
+    font-family:Arial;
+    text-align:center;
+}
+
+button{
+    padding:10px;
+    margin:5px;
+    background:rgb(165, 29, 147);
+    color:white;
+    border:none;
+}
+
+input{
+    padding:10px;
+}
+
+#menu{
+    display:none;
+    margin:10px;
+}
+
+#box{
+    width:200px;
+    margin:20px auto;
+    padding:20px;
+    background:rgb(233, 24, 163);
+}
+</style>
+</head>
+
+<body>
+
+<h1 id="greeting"></h1>
+
+<button id="pressBtn">Press, Maybe</button>
+
+<br><br>
+
+<input type="text" id="nameBox" placeholder="Click here">
+
+<br><br>
+
+<button id="menuBtn">Show 'er Hide </button>
+
+<div id="menu">
+    <p>Home</p>
+    <p>About</p>
+    <p>Contact</p>
+</div>
+
+<div id="box">
+    Peep
+</div>
+
+<button id="colorBtn">Ope</button>
+
+<script>
+
+window.addEventListener("load", function(){
+    document.getElementById("greeting").textContent =
+    "Howdy! :P";
+});
+
+document.getElementById("pressBtn")
+.addEventListener("click", function(){
+    alert("Gatekeep Girlboss Gaslight");
+});
+
+document.getElementById("nameBox")
+.addEventListener("focus", function(){
+    this.style.backgroundColor = "cyan";
+});
+
+document.getElementById("box")
+.addEventListener("mouseover", function(){
+    this.style.backgroundColor = "grey";
+});
+
+document.getElementById("menuBtn")
+.addEventListener("click", function(){
+
+    let menu = document.getElementById("menu");
+
+    if(menu.style.display === "block"){
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+});
+
+document.getElementById("colorBtn")
+.addEventListener("click", function(){
+    document.body.style.backgroundColor = "pink";
+});
+
+</script>
+
+</body>
+</html>
